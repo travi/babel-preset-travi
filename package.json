@@ -1,0 +1,20 @@
+{
+  "name": "babel-preset-travi",
+  "version": "0.0.0-semantically-released",
+  "license": "MIT",
+  "repository": "travi/babel-preset-travi",
+  "bugs": "https://github.com/travi/babel-preset-travi/issues",
+  "homepage": "https://github.com/travi/babel-preset-travi#readme",
+  "author": "Matt Travi <npm@travi.org> (https://matt.travi.org/)",
+  "scripts": {
+    "lint:js": "eslint . --cache",
+    "test": "run-s lint:*"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@travi/eslint-config-travi": "1.6.12",
+    "npm-run-all": "4.1.2"
+  }
+}
