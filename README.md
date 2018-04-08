@@ -10,6 +10,7 @@ My shareable babel preset
 [![Build Status][ci-badge]][ci-link]
 
 <!-- contribution badges -->
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
 [npm-link]: https://www.npmjs.com/package/babel-preset-travi
 [npm-badge]: https://img.shields.io/npm/v/babel-preset-travi.svg
