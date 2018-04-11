@@ -8,6 +8,7 @@
   "author": "Matt Travi <npm@travi.org> (https://matt.travi.org/)",
   "scripts": {
     "lint:js": "eslint . --cache",
+    "lint:travis": "travis lint --no-interactive",
     "test": "run-s lint:*"
   },
   "publishConfig": {
