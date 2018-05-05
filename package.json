@@ -1,15 +1,22 @@
 {
   "name": "babel-preset-travi",
   "version": "0.0.0-semantically-released",
+  "main": "lib/index.cjs.js",
+  "module": "lib/index.es.js",
   "license": "MIT",
   "repository": "travi/babel-preset-travi",
   "bugs": "https://github.com/travi/babel-preset-travi/issues",
   "homepage": "https://github.com/travi/babel-preset-travi#readme",
   "author": "Matt Travi <npm@travi.org> (https://matt.travi.org/)",
   "scripts": {
+    "clean": "rimraf lib/",
     "lint:js": "eslint . --cache",
     "lint:travis": "travis lint --no-interactive",
-    "test": "run-s lint:*"
+    "test": "run-s lint:*",
+    "build:js": "rollup -c",
+    "build": "run-s clean build:*",
+    "watch": "run-s 'build:js -- --watch'",
+    "prepublishOnly": "run-s build"
   },
   "publishConfig": {
     "access": "public"
@@ -24,7 +31,9 @@
     "commitlint-config-travi": "1.2.29",
     "cz-conventional-changelog": "2.1.0",
     "husky": "0.15.0-rc.13",
-    "npm-run-all": "4.1.2"
+    "npm-run-all": "4.1.2",
+    "rimraf": "2.6.2",
+    "rollup": "0.58.2"
   },
   "dependencies": {
     "babel-preset-env": "1.6.1"
