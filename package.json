@@ -32,6 +32,7 @@
     "@travi/eslint-config-travi": "1.6.12",
     "commitlint-config-travi": "1.2.29",
     "cz-conventional-changelog": "2.1.0",
+    "greenkeeper-lockfile": "1.14.0",
     "husky": "0.15.0-rc.13",
     "npm-run-all": "4.1.2",
     "rimraf": "2.6.2",
