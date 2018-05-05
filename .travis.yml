@@ -1,10 +1,23 @@
 language: node_js
 notifications:
   email: false
+branches:
+  except:
+  - "/^v\\d+\\.\\d+\\.\\d+$/"
+before_script:
+- npm ls --production >/dev/null
+- npm run greenkeeper:update-lockfile
 install:
 - npm install
 - gem install travis
+after_script: npm run greenkeeper:upload-lockfile
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: npm run semantic-release
 env:
   global:
   - FORCE_COLOR=1
   - NPM_CONFIG_COLOR=always
+  - GK_LOCK_COMMIT_AMEND=true
+  - secure: R2RpXOxMaVRthbD7TsE4oWkcvk9l5qrPhs8G0RVVm3Q/YVhM+vZ50ebbeNcfSwDFiZX9Fn28UF+m8mHz0ZhWIxpgUIzNSLXfibTwbUCdRb20Sd1C3hlgXw7OysC2+qtPmWpundWyOsMFws2xlfdXTkXlI9MrdXxuzywpi+LHEElgRyafCkAJQeFtqzVH6x8F1+dIE/BhOod0iNiDlLB2l5il3kwTuL1PLroHeVSJ6+8u/TtlCXvQVPvfUYHtWhKMnxD0ZVj29uvsp1ppFoSWRigVlEb1iAip3Zh3MPnmGKlQ7PkTEZGCzRvgXmkNb/5mgIFDrg4pk2u97eF7Wmyg7Wq7QEcIm4l7GBEIjEnkjZJZRtoMUENk99VCuULxUJlRD1XTQfxGi/SIMCyikBN7OgQqq7ilR3ZhJd90vlOskQsZB5sOuh8VP5D4ZGjG3gPae29M1tR28PkJDvASe1QZqTSAT9RKl3bYmKFMwvMdO19rf5fSJ0WkQLCdF2UTBTZLc86Ov9NAKbMMaV1zMrJKSGJ9KTtRqgOvLxTbptV3/hsI6w02U1uKAJp6xq7RA85Bb2Zfel+Dl6o8ObMtKfpVZHWLjrDyRVfnG4G8Gt1Tj5Syx2VwTckL5kZus34xHtkBuO3Eb7n+MBE+mRxA9ReVr8v9LoZEjdwEKkbAmO4dltQ=
