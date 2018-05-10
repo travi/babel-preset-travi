@@ -1,5 +1,6 @@
 repository:
   description: My shareable babel preset
+  homepage: https://npm.im/babel-preset-travi
   has_wiki: false
   has_projects: false
   has_downloads: false
