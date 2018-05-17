@@ -15,6 +15,9 @@ My shareable babel preset
   * [Installation](#installation)
   * [Via `.babelrc` for internal development purposes](#via-babelrc-for-internal-development-purposes)
     * [In React projects](#in-react-projects)
+  * [Via Rollup](#via-rollup)
+  * [In projects that target both node and browsers](#in-projects-that-target-both-node-and-browsers)
+  * [In React projects](#in-react-projects-1)
 * [Contribution](#contribution)
   * [Dependencies](#dependencies)
   * [Verification](#verification)
@@ -33,7 +36,7 @@ My shareable babel preset
 $ npm install babel-preset-travi --save-dev
 ```
 
-### Via `.babelrc` for internal development purposes
+### Via [`.babelrc`](https://babeljs.io/docs/usage/babelrc/) for internal development purposes
 
 This will target the current version of node and transpile my preferred upcoming
 features.
@@ -52,6 +55,70 @@ This will target the current node version, but will also transpile React feature
 {
   "presets": [["travi", {"react": true}]]
 }
+```
+
+### Via [Rollup](https://rollupjs.org)
+
+* Prevent transpilation of module imports/exports so `Rollup` can optimize properly
+* Transpile to the lowest common denominator of your expected consumers' execution
+  environments
+
+In the `rollup.config.js`:
+
+```js
+export default {
+  ...
+  plugins: [
+    babel({
+      babelrc: false,
+      exclude: ['./node_modules/**'],
+      presets: [['travi', {targets: {node: 8}, modules: false}]],
+    }),
+    ...
+  ],
+  ...
+};
+
+```
+
+### In projects that target both node and browsers
+
+```js
+export default {
+  ...
+  plugins: [
+    babel({
+      babelrc: false,
+      exclude: ['./node_modules/**'],
+      presets: [['travi', {targets: {node: 8, browser: true}, modules: false}]],
+    }),
+    ...
+  ],
+  ...
+};
+
+```
+
+### In React projects
+
+```js
+export default {
+  ...
+  plugins: [
+    babel({
+      babelrc: false,
+      exclude: ['./node_modules/**'],
+      presets: [['travi', {
+        targets: {node: 8, browser: true}, 
+        react: true, 
+        modules: false
+      }]],
+    }),
+    ...
+  ],
+  ...
+};
+
 ```
 
 ## Contribution
