@@ -13,6 +13,8 @@ My shareable babel preset
 
 * [Usage](#usage)
   * [Installation](#installation)
+  * [Via `.babelrc` for internal development purposes](#via-babelrc-for-internal-development-purposes)
+    * [In React projects](#in-react-projects)
 * [Contribution](#contribution)
   * [Dependencies](#dependencies)
   * [Verification](#verification)
@@ -29,6 +31,27 @@ My shareable babel preset
 
 ```sh
 $ npm install babel-preset-travi --save-dev
+```
+
+### Via `.babelrc` for internal development purposes
+
+This will target the current version of node and transpile my preferred upcoming
+features.
+
+```json
+{
+  "presets": ["travi"]
+}
+```
+
+#### In React projects
+
+This will target the current node version, but will also transpile React features
+
+```json
+{
+  "presets": [["travi", {"react": true}]]
+}
 ```
 
 ## Contribution
