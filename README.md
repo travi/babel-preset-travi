@@ -1,5 +1,7 @@
 # babel-preset-travi
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/travi/babel-preset-travi.svg)](https://greenkeeper.io/)
+
 My shareable babel preset
 
 <!-- status badges -->
