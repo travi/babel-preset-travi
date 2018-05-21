@@ -14,8 +14,8 @@ My shareable babel preset
   * [Via `.babelrc` for internal development purposes](#via-babelrc-for-internal-development-purposes)
     * [In React projects](#in-react-projects)
   * [Via Rollup](#via-rollup)
-  * [In projects that target both node and browsers](#in-projects-that-target-both-node-and-browsers)
-  * [In React projects](#in-react-projects-1)
+    * [In projects that target both node and browsers](#in-projects-that-target-both-node-and-browsers)
+    * [In React projects](#in-react-projects-1)
 * [Contribution](#contribution)
   * [Dependencies](#dependencies)
   * [Verification](#verification)
@@ -79,7 +79,7 @@ export default {
 
 ```
 
-### In projects that target both node and browsers
+#### In projects that target both node and browsers
 
 ```js
 export default {
@@ -97,7 +97,7 @@ export default {
 
 ```
 
-### In React projects
+#### In React projects
 
 ```js
 export default {
@@ -107,8 +107,8 @@ export default {
       babelrc: false,
       exclude: ['./node_modules/**'],
       presets: [['travi', {
-        targets: {node: 8, browser: true}, 
-        react: true, 
+        targets: {node: 8, browser: true},
+        react: true,
         modules: false
       }]],
     }),
