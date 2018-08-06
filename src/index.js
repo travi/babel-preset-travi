@@ -13,6 +13,11 @@ export default function (context, {react, targets = {}, modules} = {}) {
       ),
       react && require('babel-preset-react')
     ].filter(Boolean),
-    plugins: [[restSpread, {useBuiltIns: true}]]
+    plugins: [
+      [restSpread, {useBuiltIns: true}],
+      ...react
+        ? [require('babel-plugin-transform-class-properties'), require('babel-plugin-inline-react-svg').default]
+        : []
+    ]
   };
 }
