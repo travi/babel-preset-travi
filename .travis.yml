@@ -6,12 +6,10 @@ branches:
   - "/^v\\d+\\.\\d+\\.\\d+$/"
 before_script:
 - npm ls --production >/dev/null
-- npm run greenkeeper:update-lockfile
 - curl ifconfig.co
 install:
 - npm install
 - gem install travis
-after_script: npm run greenkeeper:upload-lockfile
 deploy:
   provider: script
   skip_cleanup: true
@@ -20,6 +18,5 @@ env:
   global:
   - FORCE_COLOR=1
   - NPM_CONFIG_COLOR=always
-    #  - GK_LOCK_COMMIT_AMEND=true
   - secure: R2RpXOxMaVRthbD7TsE4oWkcvk9l5qrPhs8G0RVVm3Q/YVhM+vZ50ebbeNcfSwDFiZX9Fn28UF+m8mHz0ZhWIxpgUIzNSLXfibTwbUCdRb20Sd1C3hlgXw7OysC2+qtPmWpundWyOsMFws2xlfdXTkXlI9MrdXxuzywpi+LHEElgRyafCkAJQeFtqzVH6x8F1+dIE/BhOod0iNiDlLB2l5il3kwTuL1PLroHeVSJ6+8u/TtlCXvQVPvfUYHtWhKMnxD0ZVj29uvsp1ppFoSWRigVlEb1iAip3Zh3MPnmGKlQ7PkTEZGCzRvgXmkNb/5mgIFDrg4pk2u97eF7Wmyg7Wq7QEcIm4l7GBEIjEnkjZJZRtoMUENk99VCuULxUJlRD1XTQfxGi/SIMCyikBN7OgQqq7ilR3ZhJd90vlOskQsZB5sOuh8VP5D4ZGjG3gPae29M1tR28PkJDvASe1QZqTSAT9RKl3bYmKFMwvMdO19rf5fSJ0WkQLCdF2UTBTZLc86Ov9NAKbMMaV1zMrJKSGJ9KTtRqgOvLxTbptV3/hsI6w02U1uKAJp6xq7RA85Bb2Zfel+Dl6o8ObMtKfpVZHWLjrDyRVfnG4G8Gt1Tj5Syx2VwTckL5kZus34xHtkBuO3Eb7n+MBE+mRxA9ReVr8v9LoZEjdwEKkbAmO4dltQ=
   - secure: cA/6kQRAHv+RpKZC2ZHsGPwIWb3pNd2W4niIL8myaFNbuxspvoylKoKrycMl/Pn2M0u3XPf861+p1nAlB13Rw8zTCr6f10oVbH8UqZv6jBgjm70e8bkHQSnpKCAwpovAk7cm5Rj+rtS4XarUMZCJzs7qXdJ7tLpHVugfrmec2Uv/4Q2D4r6ePenaLvkrcOQsu5hEWD2MmcZEkGAZ3b3QkwA2gUy87sNJzj/ZKO9UFus5U7EeITBtRRwp4BRvK4hfTeJ53jNi8HvZjEwLNRXCyF0KwjN/GRaio9vZzAHc81feRyH6yJmJZFN9/LITeayQcxT+e3XOgaHh8X0LXv+JaDDH1n9QIWE2aVGOWyn/Urng0ZtgnR2EU6Pa/38uqFaPCDKcNYED/JAU6L2jcYQ2x1KW/M444W9uUDyWa3TMKTUpGu+tt7SbHV2E+vMYoOa7tjnK2qwYF0Z0YN9PFQqpz8v0koC+BVVGcJR22ZayGscqDsvgBGguF3hVmHEIcxUBRZP/kIk2OvbyNIr5Ga31I0Q+Zoeh4kwFGZpV/Z3567y6gERLyOIaCYN3Gbw3loeL2DOdk8PdY7k/dVxTpeAVaRknv17RIIJvnXOY3ONDq1cBjylH2Tf/DXftLS3v195DZemR/1N4hYkqNoyHV/8e4/pqJsv3SCIkkdKJnTkywkA=
