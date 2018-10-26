@@ -8,7 +8,8 @@ export default function (context, {react, targets = {}, modules} = {}) {
         null,
         {
           targets: {node: targets.node || 'current', ...targets.browser && {browsers: ['last 2 versions']}},
-          ...(false === modules) && {modules: false}
+          ...(false === modules) && {modules: false},
+          exclude: ['transform-regenerator']
         }
       ),
       react && require('babel-preset-react')
