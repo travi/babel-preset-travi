@@ -1,4 +1,4 @@
-import env from 'babel-preset-env';
+import env from '@babel/preset-env';
 import restSpread from 'babel-plugin-transform-object-rest-spread';
 
 export default function (context, {react, targets = {}, modules} = {}) {
@@ -11,7 +11,7 @@ export default function (context, {react, targets = {}, modules} = {}) {
           ...(false === modules) && {modules: false}
         }
       ),
-      react && require('babel-preset-react')
+      react && require('@babel/preset-react')
     ].filter(Boolean),
     plugins: [
       [restSpread, {useBuiltIns: true}],

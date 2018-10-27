@@ -5,7 +5,7 @@ branches:
   except:
   - "/^v\\d+\\.\\d+\\.\\d+$/"
 before_script:
-- npm ls --production >/dev/null
+- npm ls >/dev/null
 - curl ifconfig.co
 install:
 - npm install
