@@ -39,7 +39,7 @@
     "rollup": "0.67.0"
   },
   "dependencies": {
-    "babel-plugin-inline-react-svg": "^1.0.0",
+    "babel-plugin-inline-react-svg": "^0.5.4",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "6.26.0",
     "babel-preset-env": "1.7.0",
