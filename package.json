@@ -1,5 +1,5 @@
 {
-  "name": "babel-preset-travi",
+  "name": "@travi/babel-preset",
   "description": "My shareable babel preset",
   "version": "0.0.0-semantically-released",
   "main": "lib/index.cjs.js",

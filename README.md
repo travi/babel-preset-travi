@@ -31,7 +31,7 @@ My shareable babel preset
 ### Installation
 
 ```sh
-$ npm install babel-preset-travi --save-dev
+$ npm install @travi/babel-preset --save-dev
 ```
 
 ### Via [`.babelrc`](https://babeljs.io/docs/usage/babelrc/) for internal development purposes
@@ -41,7 +41,7 @@ features.
 
 ```json
 {
-  "presets": ["travi"]
+  "presets": ["@travi"]
 }
 ```
 
@@ -51,7 +51,7 @@ This will target the current node version, but will also transpile React feature
 
 ```json
 {
-  "presets": [["travi", {"react": true}]]
+  "presets": [["@travi", {"react": true}]]
 }
 ```
 
@@ -70,7 +70,7 @@ export default {
     babel({
       babelrc: false,
       exclude: ['./node_modules/**'],
-      presets: [['travi', {targets: {node: 8}, modules: false}]],
+      presets: [['@travi', {targets: {node: 8}, modules: false}]],
     }),
     ...
   ],
@@ -88,7 +88,7 @@ export default {
     babel({
       babelrc: false,
       exclude: ['./node_modules/**'],
-      presets: [['travi', {targets: {node: 8, browser: true}, modules: false}]],
+      presets: [['@travi', {targets: {node: 8, browser: true}, modules: false}]],
     }),
     ...
   ],
@@ -106,7 +106,7 @@ export default {
     babel({
       babelrc: false,
       exclude: ['./node_modules/**'],
-      presets: [['travi', {
+      presets: [['@travi', {
         targets: {node: 8, browser: true},
         react: true,
         modules: false
@@ -141,8 +141,8 @@ $ npm install
 $ npm test
 ```
 
-[npm-link]: https://www.npmjs.com/package/babel-preset-travi
-[npm-badge]: https://img.shields.io/npm/v/babel-preset-travi.svg
+[npm-link]: https://www.npmjs.com/package/@travi/babel-preset
+[npm-badge]: https://img.shields.io/npm/v/@travi/babel-preset.svg
 [license-link]: LICENSE
 [license-badge]: https://img.shields.io/github/license/travi/babel-preset-travi.svg
 [ci-link]: https://travis-ci.org/travi/babel-preset-travi
