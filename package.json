@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": "travi/babel-preset-travi",
   "bugs": "https://github.com/travi/babel-preset-travi/issues",
-  "homepage": "https://npm.im/babel-preset-travi",
+  "homepage": "https://npm.im/@travi/babel-preset",
   "author": "Matt Travi <npm@travi.org> (https://matt.travi.org/)",
   "scripts": {
     "clean": "rimraf lib/",
