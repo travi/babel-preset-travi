@@ -6,7 +6,11 @@ export default function (context, {react, targets = {}, modules} = {}) {
     presets: [
       [env, {
         targets: {node: targets.node || 'current', ...targets.browser && {browsers: ['last 2 versions']}},
-        ...(false === modules) && {modules: false}
+        ...(false === modules) && {modules: false},
+        exclude: [
+          'transform-regenerator',
+          'transform-async-to-generator'
+        ]
       }],
       react && require('@babel/preset-react')
     ].filter(Boolean),
