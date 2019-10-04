@@ -1,24 +1,5 @@
-import env from '@babel/preset-env';
-import restSpread from '@babel/plugin-proposal-object-rest-spread';
+import extendForm8ionPreset from '../thirdparty-wrappers/form8ion-babel-preset';
 
-export default function (context, {react, targets = {}, modules} = {}) {
-  return {
-    presets: [
-      [env, {
-        targets: {node: targets.node || 'current', ...targets.browser && {browsers: ['last 2 versions']}},
-        ...(false === modules) && {modules: false},
-        exclude: [
-          'transform-regenerator',
-          'transform-async-to-generator'
-        ]
-      }],
-      react && require('@babel/preset-react')
-    ].filter(Boolean),
-    plugins: [
-      [restSpread, {useBuiltIns: true}],
-      ...react
-        ? [require('@babel/plugin-proposal-class-properties'), require('babel-plugin-inline-react-svg').default]
-        : []
-    ]
-  };
+export default function (context, options) {
+  return extendForm8ionPreset(context, options);
 }

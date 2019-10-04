@@ -1,1 +1,3 @@
-extends: '@travi'
+extends:
+  - '@travi'
+  - '@travi/mocha'
