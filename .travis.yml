@@ -7,9 +7,6 @@ branches:
 before_script:
 - npm ls >/dev/null
 - curl ifconfig.co
-install:
-- npm install
-- gem install travis
 deploy:
   provider: script
   skip_cleanup: true
