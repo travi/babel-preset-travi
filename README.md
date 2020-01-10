@@ -146,4 +146,4 @@ $ npm test
 [license-link]: LICENSE
 [license-badge]: https://img.shields.io/github/license/travi/babel-preset-travi.svg
 [ci-link]: https://travis-ci.org/travi/babel-preset-travi
-[ci-badge]: https://img.shields.io/travis/travi/babel-preset-travi.svg?branch=master
+[ci-badge]: https://img.shields.io/travis/com/travi/babel-preset-travi.svg?branch=master
