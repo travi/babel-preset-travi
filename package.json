@@ -43,6 +43,6 @@
     "sinon": "11.1.1"
   },
   "dependencies": {
-    "@form8ion/babel-preset": "1.6.61"
+    "@form8ion/babel-preset": "1.6.62"
   }
 }
