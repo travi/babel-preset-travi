@@ -28,7 +28,7 @@
     }
   },
   "devDependencies": {
-    "@travi/any": "2.0.17",
+    "@travi/any": "2.0.18",
     "@travi/eslint-config": "1.0.81",
     "@travi/eslint-config-mocha": "1.0.12",
     "chai": "4.3.4",
