@@ -12,11 +12,12 @@
   "scripts": {
     "clean": "rimraf lib/",
     "lint:js": "eslint . --cache",
+    "lint:md": "remark . --frail",
     "test": "run-s lint:*",
     "build:js": "rollup -c",
     "build": "run-s clean build:*",
     "watch": "run-s 'build:js -- --watch'",
-    "generate:readme": "doctoc README.md --entryprefix '*'",
+    "generate:md": "remark . --output",
     "prepack": "run-s build"
   },
   "publishConfig": {
@@ -34,9 +35,12 @@
     "chai": "4.3.6",
     "commitlint-config-travi": "1.4.14",
     "cz-conventional-changelog": "3.3.0",
-    "doctoc": "2.2.0",
     "husky": "8.0.1",
     "npm-run-all": "4.1.5",
+    "remark-cli": "10.0.1",
+    "remark-preset-lint-travi": "4.0.0",
+    "remark-toc": "8.0.1",
+    "remark-usage": "10.0.1",
     "rimraf": "3.0.2",
     "rollup": "2.74.1",
     "rollup-plugin-auto-external": "2.0.0",

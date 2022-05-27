@@ -10,7 +10,7 @@ My shareable babel preset
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+## Table of Contents
 
 * [Usage](#usage)
   * [Installation](#installation)
@@ -22,8 +22,6 @@ My shareable babel preset
 * [Contribution](#contribution)
   * [Dependencies](#dependencies)
   * [Verification](#verification)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Usage
 
@@ -53,7 +51,8 @@ features.
 
 #### In React projects
 
-This will target the current node version, but will also transpile React features
+This will target the current node version, but will also transpile React
+features
 
 ```json
 {
@@ -63,9 +62,10 @@ This will target the current node version, but will also transpile React feature
 
 ### Via [Rollup](https://rollupjs.org)
 
-* Prevent transpilation of module imports/exports so `Rollup` can optimize properly
-* Transpile to the lowest common denominator of your expected consumers' execution
-  environments
+* Prevent transpilation of module imports/exports so `Rollup` can optimize
+  properly
+* Transpile to the lowest common denominator of your expected consumers'
+  execution environments
 
 In the `rollup.config.js`:
 
