@@ -1,14 +1,14 @@
 {
   "name": "@travi/babel-preset",
   "description": "My shareable babel preset",
-  "version": "0.0.0-semantically-released",
-  "main": "lib/index.cjs.js",
-  "module": "lib/index.es.js",
   "license": "MIT",
+  "version": "0.0.0-semantically-released",
+  "author": "Matt Travi <npm@travi.org> (https://matt.travi.org/)",
   "repository": "travi/babel-preset-travi",
   "bugs": "https://github.com/travi/babel-preset-travi/issues",
   "homepage": "https://npm.im/@travi/babel-preset",
-  "author": "Matt Travi <npm@travi.org> (https://matt.travi.org/)",
+  "main": "lib/index.cjs.js",
+  "module": "lib/index.es.js",
   "scripts": {
     "clean": "rimraf lib/",
     "lint:js": "eslint . --cache",
@@ -18,7 +18,8 @@
     "build": "run-s clean build:*",
     "watch": "run-s 'build:js -- --watch'",
     "generate:md": "remark . --output",
-    "prepack": "run-s build"
+    "prepack": "run-s build",
+    "prepare": "husky install"
   },
   "publishConfig": {
     "access": "public"
@@ -27,6 +28,9 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "@form8ion/babel-preset": "1.6.99"
   },
   "devDependencies": {
     "@travi/any": "2.1.6",
@@ -45,8 +49,5 @@
     "rollup": "3.3.0",
     "rollup-plugin-auto-external": "2.0.0",
     "sinon": "14.0.2"
-  },
-  "dependencies": {
-    "@form8ion/babel-preset": "1.6.99"
   }
 }
