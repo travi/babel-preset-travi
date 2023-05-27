@@ -31,7 +31,7 @@
     }
   },
   "dependencies": {
-    "@form8ion/babel-preset": "1.6.101"
+    "@form8ion/babel-preset": "1.6.102"
   },
   "devDependencies": {
     "@travi/any": "2.1.8",
