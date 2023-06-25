@@ -13,6 +13,7 @@
     "clean": "rimraf lib/",
     "lint:js": "eslint . --cache",
     "lint:md": "remark . --frail",
+    "pretest": "run-s build",
     "test": "npm-run-all --print-label --parallel lint:*",
     "build:js": "rollup -c",
     "build": "run-s clean build:*",
