@@ -13,13 +13,14 @@
     "clean": "rimraf lib/",
     "lint:js": "eslint . --cache",
     "lint:md": "remark . --frail",
-    "test": "run-s lint:*",
+    "test": "npm-run-all --print-label --parallel lint:*",
     "build:js": "rollup -c",
     "build": "run-s clean build:*",
     "watch": "run-s 'build:js -- --watch'",
     "generate:md": "remark . --output",
     "prepack": "run-s build",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint:publish": "publint"
   },
   "publishConfig": {
     "access": "public",
@@ -42,6 +43,7 @@
     "cz-conventional-changelog": "3.3.0",
     "husky": "8.0.3",
     "npm-run-all": "4.1.5",
+    "publint": "0.1.12",
     "remark-cli": "11.0.0",
     "remark-preset-lint-travi": "5.0.2",
     "remark-toc": "8.0.1",
