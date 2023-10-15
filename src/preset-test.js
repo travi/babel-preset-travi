@@ -1,8 +1,9 @@
 import sinon from 'sinon';
 import {assert} from 'chai';
 import any from '@travi/any';
-import * as form8ionPreset from '../thirdparty-wrappers/form8ion-babel-preset';
-import buildConfig from '.';
+
+import * as form8ionPreset from '../thirdparty-wrappers/form8ion-babel-preset.js';
+import buildConfig from './index.js';
 
 suite('babel preset', () => {
   let sandbox;
