@@ -36,7 +36,7 @@
     "@form8ion/babel-preset": "1.6.128"
   },
   "devDependencies": {
-    "@travi/any": "3.1.0",
+    "@travi/any": "3.1.2",
     "@travi/eslint-config": "5.0.8",
     "@travi/eslint-config-mocha": "1.0.24",
     "chai": "5.1.1",
