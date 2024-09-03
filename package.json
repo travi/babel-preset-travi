@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@travi/any": "3.1.2",
-    "@travi/eslint-config": "5.0.8",
+    "@travi/eslint-config": "5.0.9",
     "@travi/eslint-config-mocha": "1.0.25",
     "chai": "5.1.1",
     "commitlint-config-travi": "1.4.50",
